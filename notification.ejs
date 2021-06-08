@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/images/favicon.ico">
+  <title>Random | Notifications
+  </title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+  <style>
+    .notification-card {
+			border: 1px solid #c1c1c1 !important;
+			height: 80%;
+			background-color: #ffb8b8 !important;
+			overflow-y: auto !important;
+    		overflow-x: hidden;
+			height: 430px !important;
+			box-shadow: 5px 15px 15px 0px grey;
+			border-radius: 5px;
+			width: 100%;
+		}
+        div.notification-card::-webkit-scrollbar {
+			width: 0px;
+		}
+
+		/* Track */
+		div.notification-card::-webkit-scrollbar-track {
+			background: #f1f1f1;
+			border-radius: 10px;
+			;
+		}
+
+		/* Handle */
+		div.notification-card::-webkit-scrollbar-thumb {
+			background: #888;
+			border-radius: 10px;
+		}
+
+		/* Handle on hover */
+		
+
+  </style>
+</head>
+
+<body>
+    
+
+  <!DOCTYPE html>
+  <html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+    <title>login</title>
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
+    <link rel = "icon" href =
+  "../assets/images/ylogo.png"
+          type = "image/x-icon">
+  
+    <!-- Favicons -->
+  
+    <link href="../assets/fontawesome-free-5.13.0-web/css/all.css" rel="stylesheet"> <!--load all styles -->
+  
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+    
+   
+    <!-- Vendor CSS Files -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+    <link href="../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+   
+  
+    <style type="text/css">
+      body{
+        background: linear-gradient(to right, #75cfb8, #ee99a0);
+      }    
+    </style>
+  </head>
+  
+  <body>
+  
+    <div class="container">
+        
+        
+        
+        
+    </div>
+      
+    <div class="container" align="center">
+        <h1 style="font-size: 225%;font-weight: bolder;margin-bottom: 0.6em;padding-left: 5px ;padding-right: 5px;">Notifications</h1>
+            
+      <div class="row">
+        <div class="col-12 col-md-6 offset-md-3">
+            <%not.forEach(function(not){%>
+          <div class="login" style="background-color: #009494;box-shadow: 10px 10px 10px #808080;margin-top: 10px;border-radius: 20px;">
+            
+                <div class="row news-item">
+                <div class="col-lg-11 m-0 p-0">
+                  
+                        <a href="<%=not.link%>" style="text-decoration: none;color:#f1f1f1;"target="_blank">
+                            <h6 style="line-height: 25px;"><i class="fa fa-bell"></i> <%=not.message%></h6>
+                            </a>
+                    
+                </div>
+               
+                </div>
+                
+</div>
+           
+<%})%>  
+        </div>
+      </div>
+    </div>
+      
+      
+    </body>
+  </html>
+  
+  
+  
+  
+  
+  
+  
+    
+</body>
+
+</html>

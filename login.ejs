@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Random | login
+	</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="/images/favicon.ico">
+	<!-- bootstrap and jQuary-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" href="/Css/Social.css">
+	<link rel="stylesheet" href="/Css/login.css">
+	<link rel="stylesheet" type="text/css" href="/Css/style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
+
+	<style type="text/css">
+
+	</style>
+</head>
+
+<body>
+	<section class="container">
+		<nav class="navbar navbar-dark fixed-top navbar-expand-lg bg-dark" style="text-align: center;">
+
+
+			<div class="logo">
+				<span style="color:#ff4c68;">Random</span>
+			</div>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarText">
+				<ul class="navbar-nav ml-auto">
+
+					<!--Dropdown link-->
+					<li class="nav-item dropdown active ">
+						<a class="nav-link dropdown-toggle white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Explore
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="Paint.html">Paintings</a>
+							<a class="dropdown-item" href="Photography.html">Photography</a>
+							<a class="dropdown-item" href="Abstract.html">Abstracts</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Something else here</a>
+						</div>
+					</li>
+
+					<li class="nav-item active">
+						<a class="nav-link white " href="/">Home</a>
+					</li>
+					
+					<!--links-->
+					<li class="nav-item active">
+						<a class="nav-link white" href="#about">About<span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link white" href="/contact">Contact</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link white" href="/gallery">Gallery</a>
+					</li>
+					<li class="nav-item active">
+
+						<div class="searchbar">
+							<input class="search_input" type="text" name="" placeholder="Search...">
+							<a href="#" class="search_icon "><i class="fas fa-search"></i></a>
+						</div>
+
+					</li>
+
+
+				</ul>
+
+			</div>
+
+		</nav>
+
+		<div class="login" id="loginModal" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content" style="width: 100%;background-color:#ff4c68;padding: 20px">
+					<div class="modal-header">
+						<h3 style="text-align: left;color:#fff; font-family:'Redressed';"><i style="font-size: 20px;" class="fa fa-user"></i> Login</h3>
+
+					</div>
+					<div class="modal-body" style="margin-top:5px; padding:20px 30px;background-color:#fff;border-radius: 5px;">
+						<div>
+
+							<form action="/login" method="POST">
+								<div class="form-group">
+									<label for="Deligate-Name1" style="float: left;">Username</label>
+									<input type="email" class="form-control" id="Deligate-Name1" name="username" placeholder="Email" required oninput="checkLowerCase()">
+								</div>
+								<div class="form-group">
+									<label for="Deligate-Name2" style="margin-right: 100%;">Password</label>
+									<input type="password" class="form-control" id="Deligate-Name2" name="password" placeholder="password" required>
+								</div>
+
+
+								<button type="submit" class="btn btn-danger" style="color:white;">Log In</button>
+							</form>
+							<br>
+							<h6>Forgot Password? <a href="/forgot">Click Here</a></h6>
+							<h6>Don't have an account? <a href="/register">Register Here</a></h6>
+							<br>
+
+
+							<br>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+	</section>
+	<!-- JS, Popper.js, and jQuery -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+</body>
+
+</html>

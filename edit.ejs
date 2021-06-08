@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random | Edit Painting</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <style>
+    body {
+      background: linear-gradient(to right, #75cfb8, #ee99a0);
+    }
+
+    .box {
+      width: 40%;
+      margin: 25px auto;
+    }
+
+    @media (max-width:800px) {
+      .box {
+        width: 80%;
+        margin: 25px auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <h1 style="text-align:center;margin-top:20px;">Edit Info of <%= movie.name %></h1>
+
+
+    <div class="box" width: 40%; margin: 25px auto;>
+
+      <form action="/updatepainting/<%= movie._id %>" method="POST">
+
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input class="form-control" type="text" name="movie[name]" value="<%= movie.name %>">
+        </div>
+        <div class="form-group">
+          <label for="name">Width:</label>
+          <input class="form-control" type="text" name="movie[width]" value="<%= movie.width %>">
+        </div>
+        <div class="form-group">
+          <label for="name">Length:</label>
+          <input class="form-control" type="text" name="movie[length]" value="<%= movie.length %>">
+        </div>
+        <!-------------------
+                <div class="form-group">
+                    <label for="name">Image:</label>
+                    <input class="form-control" type="text" name="movie[img]" value="<%= movie.img[1] %>">
+                </div>
+                <div class="form-group">
+                    <label for="name">Image1:</label>
+                    <input class="form-control" type="text" name="movie[img1]" value="<%= movie.img1 %>">
+                </div>
+                <div class="form-group">
+                    <label for="name">Image2:</label>
+                    <input class="form-control" type="text" name="movie[img2]" value="<%= movie.img2 %>">
+                </div>
+                -----End -------------->
+        <div class="form-group">
+          <label for="name">Category:</label>
+          <select class="form-control" name="movie[category]">
+            <option selected="">Choose One:</option>
+            <option value="digitalpainting">Digital Painting</option>
+            <option value="pencilsketch">Pencil Sketch</option>
+            <option value="acrylicpainting">Acrylic Painting</option>
+            <option value="oilpainting">Oil Painting</option>
+            <option value="tribalart">Tribal Art</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="name">Sub Category:</label>
+          <select class="form-control" name="movie[subcategory]">
+            <option selected="">Choose One:</option>
+            <option value="ashu">Abstract</option>
+            <option value="apar">Animal</option>
+            <option value="kaju">Birds</option>
+            <option value="landscape">Landscape</option>
+            <option value="none">None</option>
+            <option value="portrait">Portrait</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="name">Description:</label>
+          <input class="form-control" type="text" name="movie[description]" value="<%= movie.description %>">
+        </div>
+        <div class="form-group">
+          <label for="name">Date:</label>
+          <input class="form-control" type="text" name="movie[date]" value="<%= movie.date %>">
+        </div>
+        <div class="form-group">
+          <label for="name">Price:</label>
+          <input class="form-control" type="text" name="movie[price]" value="<%= movie.price %>">
+        </div>
+
+        <div class="form-group">
+          <button class="btn btn-lg btn-primary btn-block">Save</button>
+        </div>
+      </form>
+      <form action="/delete/<%= movie._id%>?_method=DELETE" method="POST">
+        <button type="submit" class="btn btn-lg btn-danger" style="width: 100%; margin-top:5px;">
+          Delete </button>
+      </form>
+      <br>
+      <a href="/editimage">Go Back</a>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/favicon.ico">
+  <title>Random | Upload Painting</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+
+  <!--File Pond CDN-->
+  <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
+  <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet">
+  <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #75cfb8, #ee99a0);
+    }
+
+    .main {
+      margin-left: 10vw;
+      margin-right: 10vw;
+    }
+
+    .centered {
+      text-align: center;
+    }
+
+    .btn-outline-dark {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  </style>
+  <!-- add before </body> -->
+
+</head>
+
+<body>
+  <h2 style="text-align: center; margin:30px;text-shadow: 1px 1px #f7f7e8;">Upload Painting</h2>
+  <hr>
+  <div class="main">
+
+    <form action="/add" class="ui form" method="post">
+      <div class="ui two fields">
+        <div class="form-group">
+          <label for="example">Name</label>
+          <input type="text" class="form-control" id="example" placeholder="Image Name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="example">Length</label>
+          <input type="text" class="form-control" id="example" placeholder="Image Length" name="length" required>
+        </div>
+        <div class="form-group">
+          <label for="example">Width</label>
+          <input type="text" class="form-control" id="example" placeholder="Image Width" name="width" required>
+        </div>
+        <div class="form-group">
+          <label for="example">Category</label>
+          <select name="category" class="form-control" required>
+            <option selected="">Choose One:</option>
+            <option value="digitalpainting">Digital Painting</option>
+            <option value="pencilsketch">Pencil Sketch</option>
+            <option value="acrylicpainting">Acrylic Painting</option>
+            <option value="oilpainting">Oil Painting</option>
+            <option value="tribalart">Tribal Art</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="example">Sub Category</label>
+          <select name="subcategory" class="form-control" required>
+            <option selected="">Choose One:</option>
+
+            <option value="ashu">Abstract</option>
+            <option value="apar">Animal</option>
+            <option value="kaju">Birds</option>
+            <option value="landscape">Landscape</option>
+            <option value="none">None</option>
+            <option value="portrait">Portrait</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="example">Description</label>
+          <textarea type="text" rows="2" class="form-control" id="example" placeholder="Description" name="description"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="example">Release Date</label>
+          <input type="text" class="form-control" id="example" placeholder="Release Date" name="date" required>
+        </div>
+        <div class="form-group">
+          <label for="example">Price</label>
+          <input type="text" class="form-control" id="example" placeholder="Price" name="price" required>
+        </div>
+      </div>
+      <!-- HERE WE NEED TO USE FILEPOND -->
+      <div class="ui field">
+        <label for="img">Painting</label>
+        <input type="file/images" name="img" id="img" class="filepond filepond--item">
+      </div>
+      <div class="ui field">
+        <label for="img">Painting With Frame</label>
+        <input type="file/images" name="img1" id="img" class="filepond filepond--item">
+      </div>
+      <div class="ui field">
+        <label for="img">Painting With Frame</label>
+        <input type="file/images" name="img2" id="img" class="filepond filepond--item">
+      </div>
+      <div class="centered">
+        <button type="submit" class="btn btn-outline-light" style="margin-bottom: 20px;">
+          <i class="fa fa-paper-plane" aria-hidden="true"></i> Upload Painting</button>
+      </div>
+    </form>
+  </div>
+
+
+  <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+  <script src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.js"></script>
+  <script src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
+  <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+
+
+
+  <!-- VANILLA JAVASCRIPT -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      FilePond.registerPlugin(
+        FilePondPluginImagePreview,
+        FilePondPluginImageResize,
+        FilePondPluginFileEncode
+      );
+
+      FilePond.parse(document.body);
+    });
+  </script>
+</body>
+
+</html>
