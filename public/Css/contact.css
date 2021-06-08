@@ -1,0 +1,47 @@
+#Contact {
+  margin-top: 110px;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+.invisible {
+  display: none;
+  visibility: hidden;
+}
+
+.jumbotron {
+  background-color: #ff4c68;
+}
+
+.h1 {
+  font-family: 'Redressed';
+  color: #000;
+}
+
+small {
+  color: #fff;
+  font-family: 'Redressed';
+  font-size: 1.3rem;
+}
+
+.navbar {
+  text-align: center;
+}
+
+a {
+  color: #fff;
+}
+
+a:hover {
+  color: #ff4c68;
+  text-decoration: none;
+}
+
+@media (max-width:500px) {
+  #Contact {
+    margin-top: 80px;
+  }
+}

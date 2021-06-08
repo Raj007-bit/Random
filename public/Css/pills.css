@@ -1,0 +1,26 @@
+.nav-pills .nav-link.inactive {
+  background-color: #75cfb8;
+  color: white;
+  margin: 0 10px 0 0;
+}
+
+.nav-pills .nav-link.active {
+  background-color: #ff7171;
+  color: #000;
+  margin: 0 10px 0 0px;
+}
+
+@media (max-width:560px) {
+
+  .nav-pills .nav-link.inactive {
+    background-color: #75cfb8;
+    color: white;
+    margin: 5px 5px 0 0;
+  }
+
+  .nav-pills .nav-link.active {
+    background-color: #ff7171;
+    color: #000;
+    margin: 5px 5px 0 0px;
+  }
+}

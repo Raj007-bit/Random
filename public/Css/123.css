@@ -1,0 +1,52 @@
+.featurette {
+  padding: 20px 10px;
+}
+
+.featurette-Artist {
+  margin-top: 20px;
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+}
+.placeholder-img1 {
+  height: 500px;
+  width: 500px;
+}
+.featurette-Artist{
+	height: 100px;
+	width: 100px;
+	border-radius: 100%;
+}
+.placeholder-img{
+	padding-top: 5px;
+	height: 400px;
+	width: 100%;
+	border-radius:10px;
+}
+.featurette-heading {
+  font-family: 'redressed';
+  margin: 100px 10px 10px;
+}
+
+
+
+@media screen and (max-width: 586px) {
+  
+  .featurette-Artist {
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+  }
+  .placeholder-img1{
+    margin-top: 15px;
+    margin-bottom: 10px;
+    height: 300px;
+    width: 300px;
+    border-radius:10px;
+  }
+  .featurette-heading {
+    font-family: 'redressed';
+    margin: 0px 10px 0px;
+  }
+  
+}
