@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/favicon.ico">
+  <title>Random | Add Notification</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+
+
+  <style>
+   body {
+      background: linear-gradient(to right, #75cfb8, #ee99a0);
+    }
+
+    .main1 {
+     padding: 100px 20px 10px;
+
+    }
+    .main2 {
+     padding: 100px 100px 10px;
+
+    }
+
+    .centered {
+      text-align: center;
+    }
+
+    .btn-outline-dark {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    @media (max-width:500px) {
+        .main1 {
+     padding: 100px 20px 10px;
+
+    }
+    .main2 {
+     padding: 10px 30px;
+
+    }
+    .btn-outline-dark {
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+}
+  </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row ">
+    <div class="main1 col-lg-8 col-md-12 ">
+        <h2 style="text-align: center; margin:30px;text-shadow: 1px 1px #f7f7e8;color:#000;">Create Notification</h2>
+    
+        <form action="/notification" class="ui form" method="post">
+          <div class="ui two fields">
+            <div class="form-group">
+              <label for="example" style="margin-left: 10px; color: #fff;">Notification: </label>
+              <input type="text" class="form-control" placeholder="Notification" name="message" required>
+    
+            </div>
+            <div class="form-group">
+              <label for="example" style="margin-left: 10px;color: #fff;">Link : </label>
+              <input type="text" class="form-control" placeholder="link" name="link" required>
+</div>
+          </div>
+    
+          <div class="centered">
+            <button type="submit" class="btn btn-outline-dark">
+              <i class="fa fa-plus" aria-hidden="true"></i> ADD </button>
+          </div>
+        </form>
+      </div>
+      <div class="main2 col-lg-4 col-md-12">
+      <%not.forEach(function(not){%>
+        <div class="row news-item">
+        <div class="col-lg-11 m-0 p-0">
+          
+                <a href="<%=not.link%>" style="text-decoration: none;color: black;"target="_blank">
+                    <p style="line-height: 25px;"><i class="fa fa-bell"></i> <%=not.message%></p>
+                    </a>
+            
+        </div>
+        <div class="col-lg-1 m-0 p-0">
+          
+                <form action="/not/<%= not._id%>?_method=DELETE" method="POST">
+                    <button type="submit" class="btn btn-sm btn-outline-danger" style="margin-top:5px;"><i class="fa fa-trash"></i> </button>
+                </form>
+            
+        </div>
+        </div>
+        <hr class="m-0 p-0" style="border-top:1px dashed rgba(0,0, 0, 0.2);">
+    <%})%>
+      </div>
+      </div>
+      </div>
+</body>
+
+</html>

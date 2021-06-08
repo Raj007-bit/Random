@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/favicon.ico">
+  <title>Random | Upload Video</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+
+  <style>
+    body {
+      background: linear-gradient(to right, #75cfb8, #ee99a0);
+    }
+
+    .main {
+      margin-top: 20vh;
+      margin-left: 10vw;
+      margin-right: 10vw;
+    }
+
+    .centered {
+
+      text-align: center;
+    }
+
+    .btn-outline-dark {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  </style>
+  <!-- add before </body> -->
+
+</head>
+
+<body>
+  <div class="main">
+    <h2 style="text-align: center; margin:30px;text-shadow: 1px 1px #f7f7e8;color:#000;">Upload Video</h2>
+
+    <form action="/uploadvideo" class="ui form" method="post">
+      <div class="ui two fields">
+        <div class="form-group">
+          <label for="example" style="margin-left: 10px; color: #fff;">Video Url : </label>
+          <input type="text" class="form-control" placeholder="Video Url" name="url" required>
+
+        </div>
+        <div class="form-group">
+          <label for="example" style="margin-left: 10px;color: #fff;">Category : </label>
+          <select name="category" class="form-control" required>
+            <option selected="">Choose One:</option>
+            <option value="Painting">Painting</option>
+            <option value="Tutorial">Tutorial</option>
+            <option value="Sketch">Sketch</option>
+            <option value="Portrait">Portrait</option>
+          </select>
+        </div>
+        <div style="color:#aeaeae; margin:10px;"> Note: Url should be last part of ytlink</div>
+      </div>
+
+      <div class="centered">
+        <button type="submit" class="btn btn-outline-dark">
+          <i class="fa fa-paper-plane" aria-hidden="true"></i> Upload Video</button>
+      </div>
+    </form>
+  </div>
+
+</body>
+
+</html>

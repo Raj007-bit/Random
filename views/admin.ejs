@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/images/favicon.ico">
+  <title>Dashboard | Admin</title>
+  <link rel="stylesheet" type="text/css" href="/Css/loading.css">
+  <script>
+    function hideLoading() {
+      document.getElementById('loading').style.opacity = '0';
+      document.getElementById('loading').style.zIndex = '-1';
+    }
+  </script>
+  <link rel="stylesheet" type="text/css" href="/Css/admin.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+  <style>
+    .top {
+      float: right;
+      padding: 30px 30px;
+      font-size: 20px;
+      color: #fff;
+    }
+
+    header {
+      margin: 20px 0;
+    }
+
+    @media (max-width:600px) {
+      .top {
+        float: right;
+        padding: 20px 20px;
+        font-size: 20px;
+        color: #fff;
+      }
+    }
+  </style>
+</head>
+
+<body onload="hideLoading();">
+  <div id="loading">
+    <div class="spinner-box">
+      <div class="pulse-container">
+        <div class="pulse-bubble pulse-bubble-1"></div>
+        <div class="pulse-bubble pulse-bubble-2"></div>
+        <div class="pulse-bubble pulse-bubble-3"></div>
+      </div>
+    </div>
+  </div>
+
+  <input type="checkbox" id="check">
+  <label for="check">
+    <i class="fas fa-bars" id="btn"></i>
+    <i class="fas fa-times" id="cancel"></i>
+  </label>
+
+  <div class="sidebar">
+    <header><a href="/">Random | Admin</a>
+    </header>
+    <ul>
+      <li><a href="/home"><i class="fas fa-home"></i>Home</a></li>
+      <li><a href="#"><i class="fas fa-calendar-week"></i>Events</a></li>
+      <li><a href="/upload"><i class="fas fa-upload"></i>Upload Image</a></li>
+      <li><a href="/createnotification"><i class="fas fa-edit"></i>Notifications</a></li>
+      <li><a href="/uploadvideo"><i class="fas fa-upload"></i>Upload Video</a></li>
+      <li><a href="/editimage"><i class="fas fa-edit"></i>Edit Image</a></li>
+      <li><a href="/deletevideo"><i class="fas fa-trash"></i>Delete Video</a></li>
+      <li><a href="/logout"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+    </ul>
+  </div>
+
+  <section>
+    <div class="top">
+      Hi <b> <%=name %>!</b></div>
+  </section>
+
+</body>
+
+</html>

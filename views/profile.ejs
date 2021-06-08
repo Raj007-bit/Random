@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/images/favicon.ico">
+  <title>Dashboard</title>
+  <link rel="stylesheet" type="text/css" href="/Css/admin.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+  <style>
+    .top {
+      float: right;
+      padding: 30px 30px;
+      font-size: 20px;
+      color: #fff;
+    }
+
+    header {
+      margin: 20px 0;
+    }
+
+    .main {
+      position: absolute;
+      min-height: 70%;
+      width: 60%;
+      margin: 10% 20%;
+      background: -webkit-linear-gradient(left, #41aea9, #213e3b);
+      box-shadow: 0 0 10px #000;
+      border-radius: 20px;
+      border: 2px solid #374045;
+    }
+
+    .centered {
+      text-align: center;
+      font-family: 'Redressed';
+      font-size: 40px;
+      margin-top: 10px;
+      color: #000;
+    }
+
+    .info {
+      margin: 50px 50px;
+      letter-spacing: 2px;
+      font-size: 20px;
+      font-family: 'Redressed';
+      color: #fafaf6;
+      font-weight: 100;
+    }
+
+    .hr {
+      margin-top: 20px;
+      background-color: #000;
+    }
+
+    @media (max-width:995px) {
+      .info {
+        margin: 50px 50px;
+        letter-spacing: 2px;
+        font-size: 16px;
+        font-family: 'Redressed';
+        color: #fafaf6;
+      }
+
+      .main {
+        margin: 20% 20%;
+      }
+
+      .centered {
+        font-size: 20px;
+
+      }
+    }
+
+    @media (max-width:500px) {
+      .info {
+        margin: 50px 10px;
+        letter-spacing: 2px;
+        font-size: 12px;
+        font-family: 'Redressed';
+        color: #fafaf6;
+      }
+
+      .main {
+        width: 70%;
+        margin: 30% 15%;
+      }
+
+      .centered {
+        font-size: 20px;
+
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <input type="checkbox" id="check">
+  <label for="check">
+    <i class="fas fa-bars" id="btn"></i>
+    <i class="fas fa-times" id="cancel"></i>
+  </label>
+  <div class="sidebar">
+    <header><a href="/">Random</a>
+    </header>
+    <ul>
+      <li><a href="/"><i class="fas fa-home"></i>Home</a></li>
+      <li><a href="/dashboard"><i class="fas fa-qrcode"></i>Dashboard</a></li>
+      <li><a href="#"><i class="fas fa-location-arrow"></i>Shortcuts</a></li>
+      <li><a href="#"><i class="fas fa-calendar-week"></i>Events</a></li>
+      <li><a href="/upload"><i class="fas fa-upload"></i>Upload Image</a></li>
+      <li><a href="#"><i class="fas fa-question"></i>About</a></li>
+      <li><a href="#"><i class="fas fa-hands-helping"></i>Services</a></li>
+      <li><a href="#"><i class="fas fa-envelope"></i>Contact</a></li>
+      <li><a href="/logout"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+    </ul>
+  </div>
+  <section>
+    <div class="top">
+      Hi <b> <%=name %>!</b>
+    </div>
+
+    <div class="main">
+      <div class="centered">Profile</div>
+      <hr class="hr">
+      <div class="info">
+        Name: <%= name%> <%= surname%>
+        <br>
+        Username: <%= username%>
+
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

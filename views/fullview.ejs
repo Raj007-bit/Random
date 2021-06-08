@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random | Gallery</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="icon" href="/images/favicon.ico">
+  <!--File Pond CDN-->
+  <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
+  <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet">
+  <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet">
+
+  <!-- add before </body> -->
+  <style>
+    body {
+      background-color: #eabf9f;
+    }
+
+    .full {
+      margin: 3% 25% 2% 25%;
+    }
+
+    .image {
+      width: 100%;
+      box-shadow: 0 5px 25px rgba(255, 255, 255, 0.3);
+      z-index: 999999;
+    }
+
+    @media (max-width:900px) {
+      .full {
+        margin: 10% 5% 2% 5%;
+      }
+
+      .image {
+        width: 100%;
+        height: 600px;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, .1);
+        z-index: 999999;
+      }
+
+      @media (max-width:450px) {
+        .full {
+          margin: 20% 5% 2% 5%;
+        }
+
+        .image {
+          width: 100%;
+          height: 400px;
+          box-shadow: 0 5px 25px rgba(0, 0, 0, .1);
+          z-index: 999999;
+        }
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+  <div class="full">
+    <% if(movie) { %>
+    <div class="image">
+      <img src="<%- movie.coverImagePath %>" alt="image" class="image">
+    </div>
+    <% } %>
+  </div>
+
+</body>
+
+</html>
